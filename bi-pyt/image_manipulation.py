@@ -25,7 +25,7 @@ def rotateImageLeft():
     else:
         tmpImageData = np.array(im)
 
-    rotatedImage = np.rot90(tmpImageData, 3)
+    rotatedImage = np.rot90(tmpImageData)
 
     Image.fromarray(rotatedImage).save('rotated.png')
 
@@ -41,7 +41,7 @@ def rotateImageRight():
     else:
         tmpImageData = np.array(im)
 
-    rotatedImage = np.rot90(tmpImageData)
+    rotatedImage = np.rot90(tmpImageData, 3)
 
     Image.fromarray(rotatedImage).save('rotated.png')
 
@@ -142,8 +142,6 @@ if __name__== "__main__":
     button5.clicked.connect(mirrorReflectionX)
     button6.clicked.connect(mirrorReflectionY)
     button7.clicked.connect(highlighting)
-
-
 
 
 
